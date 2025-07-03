@@ -2,6 +2,53 @@
 
 This guide provides a step-by-step process to deploy a scalable, fault-tolerant E-Commerce application on AWS using EC2 instances, an Application Load Balancer, and Auto Scaling.
 
+# 📘 Project Description
+
+This project involves the end-to-end deployment of a robust and production-ready **E-Commerce web application** on **Amazon Web Services (AWS)**. It showcases how to design and implement a **fault-tolerant**, **highly available**, and **scalable architecture** using key AWS services such as **EC2**, **Application Load Balancer (ALB)**, and **Auto Scaling Groups (ASG)**.
+
+The main goal of this deployment is to ensure:
+
+- **High Availability:** The application is distributed across multiple Availability Zones to reduce downtime and handle zone-level failures gracefully.
+- **Scalability:** Auto Scaling policies are configured to dynamically increase or decrease the number of EC2 instances based on real-time CPU utilization, ensuring efficient resource usage and cost optimization.
+- **Load Balancing:** An Application Load Balancer distributes incoming HTTP requests across healthy EC2 instances, enhancing performance and resilience.
+- **Infrastructure as a Service:** The infrastructure is provisioned using AWS native services, offering flexibility and control over compute resources.
+- **Monitoring and Alerts:** Integration with Amazon CloudWatch enables real-time monitoring and auto-triggered scaling actions. Optional integration with Amazon SNS can be used to send email notifications about system events.
+
+This project simulates a real-world use case of hosting a customer-facing web application that is expected to handle varying levels of traffic without any manual intervention. The application is served through **Apache Web Server** on Amazon Linux, and all configurations are designed to be modular and reusable for other production workloads.
+
+By following this deployment model, businesses can ensure that their application is always available, responsive, and cost-efficient — regardless of user demand.
+
+---
+
+## 🧱 Architecture Overview
+
+### 🧩 Components Involved:
+
+- Amazon EC2 (Elastic Compute Cloud)
+- Security Groups
+- Application Load Balancer (ALB)
+- Target Groups
+- Amazon Machine Image (AMI)
+- Launch Template
+- Auto Scaling Group
+- Amazon CloudWatch
+- Amazon SNS (Optional for notifications)
+
+---
+
+### 🔁 Architecture Flow:
+
+```plaintext
+User Request
+     ↓
+Application Load Balancer (ALB)
+     ↓
+Target Group
+     ↓
+Auto Scaling Group (EC2 Instances in multiple AZs)
+     ↓
+Apache Web Server serving E-Commerce App
+```
 ---
 
 ## 1. 🏗️ Provision EC2 Infrastructure
