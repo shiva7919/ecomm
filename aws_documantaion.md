@@ -14,8 +14,6 @@ The main goal of this deployment is to ensure:
 - **Infrastructure as a Service:** The infrastructure is provisioned using AWS native services, offering flexibility and control over compute resources.
 - **Monitoring and Alerts:** Integration with Amazon CloudWatch enables real-time monitoring and auto-triggered scaling actions. Optional integration with Amazon SNS can be used to send email notifications about system events.
 
-This project simulates a real-world use case of hosting a customer-facing web application that is expected to handle varying levels of traffic without any manual intervention. The application is served through **Apache Web Server** on Amazon Linux, and all configurations are designed to be modular and reusable for other production workloads.
-
 By following this deployment model, businesses can ensure that their application is always available, responsive, and cost-efficient — regardless of user demand.
 
 ---
